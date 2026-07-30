@@ -1,0 +1,10 @@
+# Databricks App runtime configuration.
+# See: https://learn.microsoft.com/en-us/azure/databricks/dev-tools/databricks-apps/create-custom-app
+#
+# Databricks installs Node.js dependencies (npm install), runs the "build" script
+# from package.json (npm run build), then runs this command to start the app.
+command: ["npm", "run", "start:databricks"]
+
+env:
+  - name: "NODE_ENV"
+    value: "production"
